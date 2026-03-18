@@ -12,9 +12,14 @@
             Console.WriteLine($"Oszlopok száma: {racs.OszlopokDb}");
 
 
+            Console.WriteLine("6. feladat");
             racs.Megjelenit();
-           
-    }
+
+            Console.WriteLine("7. feladat");
+            int hossz = racs.LeghosszabbFuggolegesSzo();
+            Console.WriteLine($"A leghosszabb függőleges szó hossza: {hossz}");
+
+        }
 
 
 

@@ -54,7 +54,6 @@ namespace Keresztrejtveny
 
         public void Megjelenit()
         {
-            Console.WriteLine("6. feladat");
 
             for (int i = 1; i <= SorokDb; i++)
             {
@@ -68,8 +67,34 @@ namespace Keresztrejtveny
                 Console.WriteLine();
             }
         }
+        
+        public int LeghosszabbFuggolegesSzo()
+        {
+            int maxHossz = 0;
 
+            for (int j = 1; j <= OszlopokDb; j++)
+            {
+                int hossz = 0;
 
+                for (int i = 1; i <= SorokDb + 1; i++)
+                {
+                    if (Racs[i, j] == '-')
+                    {
+                        hossz++;
+                    }
+                    else
+                    {
+                        if (hossz >= 2 && hossz > maxHossz)
+                        {
+                            maxHossz = hossz;
+                        }
+                        hossz = 0;
+                    }
+                }
+            }
+
+            return maxHossz;
+        }
 
     }
     }
