@@ -10,6 +10,9 @@
             Console.WriteLine("5. feladat");
             Console.WriteLine($"Sorok száma: {racs.SorokDb}");
             Console.WriteLine($"Oszlopok száma: {racs.OszlopokDb}");
+
+
+            racs.Megjelenit();
            
     }
 
