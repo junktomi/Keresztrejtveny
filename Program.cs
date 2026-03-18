@@ -2,7 +2,16 @@
 {
     internal class Program
     {
-        static void Main(string[] args) { }
+        static void Main(string[] args) {
+
+            KeresztrejtvenyRacs racs = new KeresztrejtvenyRacs("kr1.txt");
+
+            
+            Console.WriteLine("5. feladat");
+            Console.WriteLine($"Sorok száma: {racs.SorokDb}");
+            Console.WriteLine($"Oszlopok száma: {racs.OszlopokDb}");
+           
+    }
 
 
 

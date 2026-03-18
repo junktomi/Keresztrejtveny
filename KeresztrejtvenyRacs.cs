@@ -22,7 +22,8 @@ namespace Keresztrejtveny
             SorokDb = Adatsorok.Count;
             OszlopokDb = Adatsorok[0].Length;
 
-            Racs = new char[SorokDb, OszlopokDb];
+            Racs = new char[SorokDb + 2, OszlopokDb + 2];
+            Sorszamok = new int[SorokDb + 2, OszlopokDb + 2];
 
             FeltoltRacs();
         }
@@ -31,16 +32,28 @@ namespace Keresztrejtveny
             Adatsorok = new List<string>(File.ReadAllLines(fajlNev));
         }
 
+      
         private void FeltoltRacs()
         {
+            for (int i = 0; i < SorokDb + 2; i++)
+            {
+                for (int j = 0; j < OszlopokDb + 2; j++)
+                {
+                    Racs[i, j] = '#';
+                }
+            }
+
             for (int i = 0; i < SorokDb; i++)
             {
                 for (int j = 0; j < OszlopokDb; j++)
                 {
-                    Racs[i, j] = Adatsorok[i][j];
+                    Racs[i + 1, j + 1] = Adatsorok[i][j];
                 }
             }
         }
+
+        
+
 
 
     }
